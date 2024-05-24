@@ -6,8 +6,9 @@
         <img src="{{ $comic->thumb }}" alt="{{$comic->title}}">
 
         <h5>{{$comic->price}} $</h5>
-        <span>{{$comic->series}}</span>
+        <span>Serie: {{$comic->series}}</span>
         <div>
+            Descrizione:
             {{$comic->description}}
         </div>
 

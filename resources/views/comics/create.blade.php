@@ -36,9 +36,9 @@
                 <div class="mb-3">
                     <label for="type" class="form-label">Tipo</label>
                     <select class="form-select" id="type" name="type">
-                        <option selected>Open this select menu</option>
+                        <option selected>Seleziona il tipo di fumetto</option>
                         <option value="graphic novel">Graphic novel</option>
-                        <option value="comic Book">Comic Book</option>
+                        <option value="comic book">Comic Book</option>
                     </select>
                 </div>
 
