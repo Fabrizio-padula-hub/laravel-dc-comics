@@ -13,7 +13,7 @@
                     <div class="col-4 mb-3">
 
                         <div class="card">
-                            <img src="https://picsum.photos/200/300" class="card-img-top" alt="{{$comicItem->title}}">
+                            <img src="{{ $comicItem->thumb }}" class="card-img-top" alt="{{$comicItem->title}}">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     Titolo: {{$comicItem->title}}
