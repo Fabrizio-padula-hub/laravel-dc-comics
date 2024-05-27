@@ -31,13 +31,23 @@
 
                             <div class="d-flex justify-content-center align-items-center align-items-stretch mb-3">
                                 
-                                <a href="{{ route('comics.show', ['comic' => $comicItem->id])}}" class="btn btn-primary mx-2">
+                                <a href="{{ route('comics.show', ['comic' => $comicItem->id])}}" class="btn btn-primary">
                                     Scopri
                                 </a>
                             
-                                <a href="{{ route('comics.edit', ['comic' => $comicItem->id])}}" class="btn btn-primary">
+                                <a href="{{ route('comics.edit', ['comic' => $comicItem->id])}}" class="btn btn-primary mx-2">
                                     Modifica
                                 </a>
+
+                                <div>
+                                    <form action="{{ route('comics.destroy', ['comic' => $comicItem->id]) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+
+                                        <button type="submit" class="btn btn-danger">Elimina</button>
+
+                                    </form>
+                                </div>
                                 
                             </div>
 
