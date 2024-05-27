@@ -4,10 +4,6 @@
 
 
     <section>
-        <nav class="nav">
-            <a class="nav-link active" aria-current="page" href="{{route('comics.index')}}">Home</a>
-            <a class="nav-link" href="{{route('comics.create')}}">Aggiungi un fumetto</a>
-        </nav>
 
         <div class="container">
             <h1>Fumetti</h1>
@@ -20,25 +16,29 @@
                             <img src="{{ $comicItem->thumb }}" class="card-img-top" alt="{{$comicItem->title}}">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    Titolo: {{$comicItem->title}}
+                                    {{$comicItem->title}}
                                 </h5>
                                 <p class="card-text">
-                                    Descrizione: {{$comicItem->description}}
+                                    <strong>Descrizione</strong>: {{$comicItem->description}}
                                 </p>
-                                <h5>Prezzo: {{$comicItem->price}} $ </h5>
-                                <span>Serie: {{$comicItem->series}} </span>
+                                <h5>
+                                    <strong>Prezzo</strong>: {{$comicItem->price}} $ 
+                                </h5>
+                                <span>
+                                    <strong>Serie</strong>: {{$comicItem->series}} 
+                                </span>
                             </div>
 
-                            <div>
-                                <a href="{{ route('comics.show', ['comic' => $comicItem->id])}}" class="btn btn-primary">
+                            <div class="d-flex justify-content-center align-items-center align-items-stretch mb-3">
+                                
+                                <a href="{{ route('comics.show', ['comic' => $comicItem->id])}}" class="btn btn-primary mx-2">
                                     Scopri
                                 </a>
-                            </div>
-
-                            <div class="mt-3">
+                            
                                 <a href="{{ route('comics.edit', ['comic' => $comicItem->id])}}" class="btn btn-primary">
                                     Modifica
                                 </a>
+                                
                             </div>
 
                         </div>

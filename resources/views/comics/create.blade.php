@@ -47,7 +47,7 @@
                     <textarea class="form-control" id="description" rows="5" name="description"></textarea>
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Aggiungi</button>
             </form>
 
         </section>
