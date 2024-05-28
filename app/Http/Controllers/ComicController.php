@@ -48,11 +48,20 @@ class ComicController extends Controller
                 'title' => 'required|min:10|max:255',
                 'description' => 'required|min:5|max:2000',
                 'thumb' => 'required|url:http,https',
-                'price' => 'required',
+                'price' => 'required|decimal:2',
                 'series' => 'required|min:5|max:90',
                 'type' => 'required',
-                'sale_date' => 'required',
-            ]
+                'sale_date' => 'required'
+            ],
+            [
+                'title' => 'Parametro richiesto, il titolo deve avere min 5 caratteri e max 255 caratteri',
+                'description' => 'Parametro richiesto',
+                'thumb' => 'l\'immagine deve essere un ULR',
+                'price' => 'Parametro richiesto, deve essere un numero',
+                'series' => 'Parametro richiesto',
+                'type' => 'Parametro richiesto',
+                'sale_date' => 'Parametro richiesto'
+            ],
         );
 
         $formData = $request->all();
